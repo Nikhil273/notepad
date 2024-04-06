@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notepad - A text Editor</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="option-menu">
+        <!-- Select the font size -->
+        <label for="slt">Pick a Font-size:</label>
+        <select id="slt" onchange="updateStyles()">
+          <option value="Null">Null</option>
+          <option value="16px">16px</option>
+          <option value="20px">20px</option>
+          <option value="25px">25px</option>
+          <option value="30px">30px</option>
+        </select>
+
+        <!-- Pick a font color -->
+        <label for="ft-color">Pick a Font Color:</label>
+        <input
+          type="color"
+          id="ft-color"
+          value="#000000"
+          onchange="updateStyles()"
+        />
+
+        <!-- Pick a background color -->
+        <label for="bc-color">Pick a Background Color:</label>
+        <input
+          type="color"
+          id="bc-color"
+          value="#ffffff"
+          onchange="updateStyles()"
+        />
+      </div>
+
+      <!-- Textarea for displaying styles -->
+      <textarea id="txt" placeholder="Type something here..."></textarea>
+
+      <div class="button-container">
+        <button id="clear-txt" onclick="clearText()">Clear All</button>
+
+        <button id="save-txt" onclick="saveText()">Save</button>
+      </div>
+    </div>
+
+    <script src="script.js">
+      
+   </script>
+  </body>
+</html>
